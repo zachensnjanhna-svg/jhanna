@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP / ECONOMICS 9 - Second Quarter - Lesson 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 15px;
+      padding: 50px 20px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease-in-out;
+      margin-bottom: 30px;
+    }
+
+    header:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(to left, #ff7e5f, #feb47b);
+      background-clip: text;
+      color: transparent;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    h1:hover {
+      transform: scale(1.1);
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #5d4a74;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.2rem;
+      color: #6b4f97;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+      transform: scale(1.1);
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #f7a7b3;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    .intro {
+      margin: 40px 0;
+    }
+
+    .css-card {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 0 auto;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .css-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .css-card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #8ec5fc;
+    }
+
+    .css-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #5d4a74;
+    }
+
+    .css-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .creative {
+      margin-top: 60px;
+    }
+
+    .example-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .css-box {
+      background: linear-gradient(45deg, #f7a7b3, #f7d4d4);
+      color: white;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: floatUp 3s ease-in-out infinite;
+      text-align: justify;
+      padding: 20px;
+    }
+
+    .css-box p, .css-box h3, .css-box li {
+      color: white;
+    }
+
+    .css-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .cta-button {
+      background-color: #6b4f97;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: #8ec5fc;
+      transform: scale(1.05);
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .example-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .css-box {
+        width: 90%;
+        height: auto;
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson1.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson2.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson3.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson4.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson5.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson6.html">Lesson 6</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+  <header>
+    <h1>Konsepto ng Demand</h1>
+  </header>
+
+  <section class="intro">
+    <div class="css-card">
+     <h2>A. Kahulugan ng Demand</h2>
+      <p>Ang demand ay tumutukoy sa dami ng produkto at serbisyong nais at kayang bilhin ng mamimili sa iba't ibang presyo sa isang takdang panahon. Ipinapakita nito kung paano ang presyo ng produkto ay nakakaapekto sa dami ng produkto na handa at kayang bilhin ng mamimili.</p>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="css-card">
+      <h2>Batas ng Demand</h2>
+      <p>Ayon sa Batas ng Demand, kapag mababa ang presyo, tumataas ang demand, at kapag mataas ang presyo, bumababa ang demand. Ang konseptong ito ay nagpapakita ng inverse (di-tuwirang) ugnayan ng presyo at quantity demanded.</p>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="css-card">
+      <h2>Ceteris Paribus</h2>
+      <p>Ipinagpapalagay na ang presyo lamang ang salik na nakaaapekto sa pagbabago ng quantity demanded, at ang ibang salik ay hindi nagbabago o nakakaapekto rito.</p>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="css-card">
+     <h2>Tatlong Pamamaraan sa Pagpapakita ng Demand</h2>
+      <ol>
+        <li><strong>Iskedyul ng Demand (Demand Schedule):</strong><br>Ang Demand Schedule ay isang talaan na nagpapakita ng ugnayan ng presyo at quantity demanded.</li>
+        <img src="schedule.png" alt="Halimbawa ng isang Demand Schedule"><br>
+        <li><strong>Kurba ng Demand (Demand Curve):</strong><br>Ang demand curve ay isang grapikong representasyon ng demand schedule.</li>
+        <img src="curve.png" alt="Halimbawa ng isang Demand Curve"><br>
+        <li><strong>Demand Function:</strong><br>Ang demand function ay isang matematikal na paraan ng pagpapakita ng ugnayan ng presyo at quantity demanded.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="creative">
+    <h1>Mga Salik na Nakakaapekto sa Demand</h1>
+
+    <div class="example-container">
+      <div class="css-box">
+        <h3>Kita</h3>
+        <p>Kapag tumaas ang kita ng tao, tumataas ang kakayahan nilang bumili ng mas maraming produkto, na nagreresulta sa pagtaas ng demand para sa mga normal goods.</p>
+      </div>
+
+      <div class="css-box">
+         <h3>Panlasa</h3>
+        <p>Ang pagbabago sa panlasa ng mamimili ay maaaring magdulot ng pagbabago sa demand. Kung ang isang produkto ay sumikat o naging uso, tataas ang demand para dito.</p>
+      </div>
+
+      <div class="css-box">
+        <h3>Diminishing Utility</h3>
+        <p>Ayon sa prinsipyo ng diminishing utility, ang kasiyahan ng tao ay tumataas habang patuloy na kumokonsumo ng isang produkto. Ngunit, sa paglipas ng panahon, ang karagdagang kasiyahan ay bumababa.</p>
+      </div>
+
+      <div class="css-box">
+        <h3>Dami ng Mamimili</h3>
+        <p>Ang pagtaas ng populasyon o bilang ng mamimili sa isang lugar ay maaaring magdulot ng pagtaas ng demand.</p>
+      </div>
+
+      <div class="css-box">
+        <h3>Presyo ng Magkaugnay na Produkto</h3>
+        <p>Ang mga produkto na magkaugnay sa pagkonsumo ay tinatawag na komplementaryo o pamalit.</p>
+      </div>
+
+      <div class="css-box">
+         <h3>Inaasahan ng mga Mamimili sa Hinaharap</h3>
+        <p>Kung ang mga mamimili ay umaasa na tataas ang presyo ng isang produkto, tataas ang demand para dito sa kasalukuyan.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>"A Bright Mind is nothing without a Humble Heart."</p>
+  </footer>
+</body>
+</html>

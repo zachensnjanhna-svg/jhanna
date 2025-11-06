@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLE / ICT 9 - Second Quarter - Lesson 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1521747116042-5a810fda9664') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        nav a {
+            font-size: 1.2rem;
+            color: #6b4f97;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: #f7a7b3;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #f7a7b3;
+            transform: scale(1.1);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 80px;
+            width: 100%;
+            max-width: 90%;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            width: 100%;
+            margin-top: 40px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            color: #6b4f97;
+            margin: 0;
+            opacity: 1;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        section .content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        section:hover .content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section:hover h2 {
+            opacity: 0;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #ff7e5f;
+            margin-top: 15px;
+        }
+
+        p,
+        ul {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+        }
+
+   
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                padding: 0 10px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 20px;
+                width: 100%;
+                min-height: auto;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            p,
+            ul {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+       <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%201.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%202.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%203.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%204.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%205.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%206.html">Lesson 6</a>
+   <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+        <header>
+            <h1>LESSON 2</h1>
+            <h2>Style Sheets</h2>
+        </header>
+
+        <div class="content-container">
+            <section>
+                <h2>What will we use in CSS?</h2>
+                <div class="content">
+                    <ul>
+                        <li>Curly braces { }</li>
+                        <li>Colons :</li>
+                        <li>Semi-Colons ;</li>
+                        <li>Selectors</li>
+                        <li>Declarations</li>
+                    </ul>
+                </div>
+            </section>
+
+<section>
+  <div>
+<h2>CSS Syntax</h2>
+    <img class="content" src="syntax.png" alt="CSS Syntax" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+  </div>
+</section>
+
+            <section>
+                <h2>Structure of CSS</h2>
+                <div class="content">
+                    <h3>Selector</h3>
+                    <p>The HTML element you want to style; is a pattern used to "find" or "select" the HTML elements on a webpage to which a set of CSS rules will be applied.</p>
+                    <h3>Property</h3>
+                    <p>The style attribute you want to modify; is a named characteristic or attribute that defines a specific aspect of how an HTML element should be displayed or rendered by the browser.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>The Style Sheet and its Parts</h2>
+                <div class="content">
+                    <p>A style sheet is a set of instructions to a web browser on how to display various elements on a web page.</p>
+                    <p>Every CSS (whether it is contained in a .css file, or embedded in the head element of an HTML document) is a series of instructions called statements.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>How Do Style Sheets Work?</h2>
+                <div class="content">
+                    <p>Style sheets are just text files, or text embedded in the head of an HTML document, that help separate content from appearance.</p>
+                    <p>The content of the page goes into an HTML file, and the appearance goes into a style sheet.</p>
+                    <p>A style sheet suggests the browser how to display a page in a particular way.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Three Kinds of CSS</h2>
+                <div class="content">
+                    <h3>External Style Sheets</h3>
+                    <p>External style sheets allow you to develop a consistent style across pages and change the layout of your entire website by simply changing one CSS file.</p>
+                   
+                    <h3>Embedded Style Sheets</h3>
+                    <p>Embedded style sheets are placed within the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags and override external style sheets.</p>
+                   
+                    <h3>Inline Style Sheets</h3>
+                    <p>Inline style sheets are used for isolated changes to a headline, paragraph, or other element and are placed directly in the style attribute of an HTML tag.</p>
+                  
+                </div>
+            </section>
+<section>
+  <div>
+<h2>Types of CSS Example Codes</h2>
+    <img class="content" src="output.png" alt="Example Code" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+    <img class="content" src="html.png" alt="Example Code" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+    <img class="content" src="css.png" alt="Example Code" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+  </div>
+</section>
+
+
+            <section>
+                <h2>CSS Comments</h2>
+                <div class="content">
+                    <p>CSS comments are used to explain the code and help you edit it later. Comments are ignored by the browsers.</p>
+                   
+                </div>
+            </section>
+<section>
+  <div>
+<h2>CSS Comment Example Code</h2>
+    <img class="content" src="comment.png" alt="CSS Comment Example Code" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+  </div>
+</section>
+        </div>
+
+      
+    </div>
+
+</body>
+
+</html>

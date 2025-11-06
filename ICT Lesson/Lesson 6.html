@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLE / ICT 9 - Second Quarter - Lesson 6</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+      background: linear-gradient(135deg, #D1E4FF, #F9F9F9);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.2rem;
+      color: #6b4f97;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+    }
+
+    nav a::after {
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #f7a7b3;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease; 
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    header {
+      width: 100%;
+      background: #6c5b7b;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-30px);
+      opacity: 0;
+      animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #f7f7f7;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #d1c8d1;
+      margin-top: 10px;
+    }
+
+    .lesson-content {
+      padding: 40px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      width: 80%;
+      text-align: left;
+      transition: all 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    /* Hover effect for .lesson-content */
+    .lesson-content:hover {
+      background-color: #f1f1f1;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .lesson-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .lesson-content p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .lesson-content ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+
+    .button {
+      padding: 12px 25px;
+      background-color: #A2B5D4;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .button:hover {
+      background-color: #7C97B6;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%201.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%202.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%203.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%204.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%205.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%206.html">Lesson 6</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+  <header>
+    <h1>Lesson 6: Setting Dimensions</h1>
+  </header>
+
+  <div class="lesson-content">
+    <h2>Property for Dimensions</h2>
+    <p>CSS can be used to manage dimensions such as visibility, width, height, and more.</p>
+    <p>Some common properties include:</p>
+    <ul>
+      <li><strong>visibility:</strong> Controls if an element is visible or hidden.</li>
+      <li><strong>width:</strong> Specifies the width of an element.</li>
+      <li><strong>height:</strong> Specifies the height of an element.</li>
+      <li><strong>line-height:</strong> Controls the spacing between lines of text.</li>
+      <li><strong>max-width:</strong> Limits the maximum width of an element.</li>
+      <li><strong>min-height:</strong> Specifies the minimum height of an element.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-content">
+    <h2>Pseudo-Classes and Links</h2>
+    <p>Pseudo-classes are used to define the state of an element, such as when a user interacts with it.</p>
+    <p>Some common pseudo-classes for links:</p>
+    <ul>
+      <li><code>:link</code> - Applied to unvisited links.</li>
+      <li><code>:visited</code> - Applied to visited links.</li>
+      <li><code>:hover</code> - Applied when the mouse hovers over the element.</li>
+      <li><code>:active</code> - Applied when the element is clicked.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-content">
+    <h2>Example code</h2>
+    <img src="code.png" alt="Example code using Pseudo and Dimensions">
+    <img src="outcome.png" alt="Example code using Pseudo and Dimensions">
+  </div>
+
+</body>
+</html>

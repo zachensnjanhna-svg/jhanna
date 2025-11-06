@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP / ECONOMICS 9 - Second Quarter - Lesson 5</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+      background: linear-gradient(135deg, #D1E4FF, #F9F9F9);
+    }
+
+     nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.2rem;
+      color: #6b4f97;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #f7a7b3;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+ 
+    nav a:hover::after {
+      width: 100%;
+    }
+ 
+    header {
+      width: 100%;
+      background: #6c5b7b;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-30px);
+      opacity: 0;
+      animation: slideIn 1s forwards;
+    }
+ 
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+ 
+    header h1 {
+      font-size: 3rem;
+      color: #f7f7f7;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #d1c8d1;
+      margin-top: 10px;
+    } 
+
+    .lesson-content {
+      padding: 40px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      width: 80%;
+      text-align: left;
+    }
+
+    .lesson-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .lesson-content p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .lesson-content ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+
+  </style>
+</head>
+<body>
+        <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson1.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson2.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson3.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson4.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson5.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson6.html">Lesson 6</a>
+   <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+
+  <header>
+    <h1>Lesson 5: Elastisidad</h1>
+  </header>
+
+  <div class="lesson-content">
+    <h2>Elastisidad ng Demand</h2>
+    <p>Ang elastisidad ay tumutukoy sa antas ng pagtugon ng bawat mamimili sa pagbabago ng presyo.</p>
+    <h3>Uri ng Elastisidad ng Demand</h3>
+    <ul>
+      <li><strong>Elastiko:</strong> Koepisyente ay >1. Sa bawat 1% na pagbabago sa presyo, higit sa 1% ang pagbabago sa dami ng demand. <br>
+      <img src="elastic.png" alt="Graph ng Elastik Demand"></li>
+
+      <li><strong>Ganap na Elastiko:</strong> Koepisyente = Infinite. Handang bumili ang mamimili ng iba't ibang dami ng demand sa iisang presyo.<br>
+      <img src="perfect.png" alt="Graph ng Ganap na Elastik Demand"></li>
+
+      <li><strong>Di-Elastiko:</strong> Koepisyente ay <1. Hindi maaaring bawasan ng malaki ng mamimili ang dami ng demand kumpara sa pagtaas ng presyo.<br>
+      <img src="inelastic.png" alt="Graph ng Di Elastik Demand"></li>
+
+      <li><strong>Ganap na Di-Elastiko:</strong> Koepisyente = 0. Handang bumili ang mamimili ng nakatakdang dami ng demand anuman ang presyo.<br>
+      <img src="perfectly.png" alt="Graph ng Ganap na Di Elastik Demand"></li>
+
+      <li><strong>Unit Elastik:</strong> Koepisyente = 1. Kayang pantayan ng mamimili ang dami ng demand sa anumang pagbabago ng presyo.<br>
+      <img src="unit.png" alt="Graph ng Unitary Elastic Demand"></li>
+
+    </ul>
+  </div>
+
+  <div class="lesson-content">
+    <h2>Elastisidad ng Supply</h2>
+    <p>Ang elastisidad ng supply ay tumutukoy sa pagbabago sa bahagdang dami ng suplay ayon sa pagbabago ng presyo.</p>
+    <h3>Uri ng Elastisidad ng Supply</h3>
+    <ul>
+      <li><strong>Elastiko:</strong> Koepisyente ay >1. Sa bawat 1% na pagbabago sa presyo, higit sa 1% ang pagbabago sa dami ng supply.<br>
+      <img src="elastiko.png" alt="Graph ng Elastik Supply"></li>
+
+      <li><strong>Ganap na Elastiko:</strong> Koepisyente = Infinite. Handang magtinda ang prodyuser ng iba't ibang dami ng supply sa iisang takdang presyo.<br>
+      <img src="ganap.png" alt="Graph ng Ganap na Elastik Supply"></li>
+
+      <li><strong>Di-Elastiko:</strong> Koepisyente ay <1. Hindi maaaring bawasan ng malaki ng prodyuser ang dami ng supply kumpara sa pagtaas ng presyo.<br>
+      <img src="di elastiko.png" alt="Graph ng Di Elastik Supply"></li>
+
+      <li><strong>Ganap na Di-Elastiko:</strong> Koepisyente = 0. Walang kakayahang magdagdag o maglaki ng dami ng suplay kumpara sa porsyento ng pagtaas ng       presyo.<br>
+      <img src="ganapnadielastiko.png" alt="Graph ng Ganap na di Elastik Supply"></li>
+
+      <li><strong>Unit Elastik:</strong> Koepisyente = 1. Kayang pantayan ng prodyuser ang dami ng supply sa anumang pagbabago ng presyo.<br>
+      <img src="unitary.png" alt="Graph ng Unitary Elastic Supply"></li>
+
+    </ul>
+  </div>
+
+</body>
+</html>

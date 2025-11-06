@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLE / ICT 9 - Second Quarter - Lesson 4</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      padding-top: 50px;
+    }
+
+    header {
+      background-color: #009688;
+      padding: 70px;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      width: 300px;
+      height: 350px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .card h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #009688;
+      transition: width 0.4s ease;
+    }
+
+    .card h2:hover::after {
+      width: 100%;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 15px 0;
+      margin-bottom: 40px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.3rem;
+      color: #6b4f97;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #6b757d;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+    }
+
+    .lesson-content {
+      padding: 40px;
+      margin: 0 40px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+
+    .lesson-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .lesson-content p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .lesson-content ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .lesson-content h2 {
+        font-size: 1.8rem;
+      }
+
+      .lesson-content p, .lesson-content ul {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-container {
+        padding: 20px;
+      }
+
+      .card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%201.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%202.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%203.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%204.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%205.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%206.html">Lesson 6</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+  <header>
+    <h1>Lesson 4: CSS Rule & Classes</h1>
+  </header>
+
+  <div class="lesson-content">
+    <h2>CSS Rule</h2>
+    <p>A CSS rule has two main parts: a <strong>selector</strong>, and one or more <strong>style declarations</strong>.</p>
+    <p>The basic format of a CSS style rule is as follows:</p>
+    <pre><code>For Inline style rule:
+<tag style="style declaration">
+<tag style="prop1:value; prop2:value; prop3:value;">
+
+For document-level and external style sheets:
+selector {style declarations}
+selector {prop1:value; prop2:value; prop3:value;}</code></pre>
+  </div>
+
+  <div class="lesson-content">
+    <h2>Style Properties</h2>
+    <p>Properties in CSS are collected into six groups:</p>
+    <ul>
+      <li>Fonts</li>
+      <li>Colors and backgrounds</li>
+      <li>Text</li>
+      <li>Boxes and layout</li>
+      <li>Lists</li>
+      <li>Tag classifications</li>
+    </ul>
+  </div>
+
+  <div class="lesson-content">
+    <h2>Classes</h2>
+    <p><strong>What are Classes?</strong></p>
+    <p>A class is a user-defined selector that allows you to apply a style rule to specific HTML tags.</p>
+    <p>Classes are reusable, meaning you can apply the same set of formatting rules to multiple HTML elements. You define a class using a dot (.) followed by the class name.</p>
+  </div>
+
+  <div class="lesson-content">
+    <h2>Example: Using Classes</h2>
+    <p>Here is an example using classes in HTML and CSS:</p>
+    <img src="element.png" alt="Example using class selector">
+    <img src="selector.png" alt="Example using class selector">
+  </div>
+
+</body>
+</html>

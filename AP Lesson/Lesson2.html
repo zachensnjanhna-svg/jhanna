@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP / ECONOMICS 9 - Second Quarter - Lesson 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1521747116042-5a810fda9664') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        nav a {
+            font-size: 1.2rem;
+            color: #6b4f97;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: #f7a7b3;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #f7a7b3;
+            transform: scale(1.1);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 80px;
+            width: 100%;
+            max-width: 90%;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            width: 100%;
+            margin-top: 40px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: auto;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            color: #6b4f97;
+            margin: 0;
+            opacity: 1;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        section .content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        section:hover .content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section:hover h2 {
+            opacity: 0;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #ff7e5f;
+            margin-top: 15px;
+        }
+
+        p,
+        ul {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+        }
+
+        .code-block {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                padding: 0 10px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 20px;
+                width: 100%;
+                min-height: auto;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            p,
+            ul {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson1.html">Lesson 1</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson2.html">Lesson 2</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson3.html">Lesson 3</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson4.html">Lesson 4</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson5.html">Lesson 5</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson6.html">Lesson 6</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Reflection.html">Reflection</a>
+        </nav>
+
+        <header>
+            <h1>Ang Konsepto ng Supply</h1>
+        </header>
+
+        <div class="content-container">
+            <section>
+                <h2>Kahulugan ng Supply</h2>
+                <div class="content">
+                    <p>Ang supply ay tumutukoy sa dami ng produkto o serbisyo na handa at kayang ipagbili ng mga prodyuser sa iba’t ibang presyo sa isang takdang panahon. Ang supply ay isang mahalagang bahagi ng pamilihan dahil ito ang nagpapakita kung gaano karaming produkto ang kayang ipagbili batay sa presyo ng produkto.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Batas ng Supply</h2>
+                <div class="content">
+                    <p>Ayon sa Batas ng Supply, mayroong direkta o positibong ugnayan ang presyo at ang quantity supplied (Qs) ng isang produkto. Ibig sabihin, kapag tumataas ang presyo ng isang produkto, tumataas din ang dami ng produkto na handang ipagbili ng mga prodyuser. Sa kabaligtaran, kapag bumababa ang presyo, bumababa rin ang dami ng produkto na kayang ipagbili ng mga prodyuser.</p>
+                    <p>Halimbawa, kapag tumaas ang presyo ng isang produkto, may higit na insentibo ang mga prodyuser na magbenta ng mas marami upang kumita.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Ceteris Paribus</h2>
+                <div class="content">
+                    <p>Ipinagpapalagay na ang mga ibang salik ay hindi nagbabago. Sa madaling salita, ang ceteris paribus ay isang termino na ginagamit sa microeconomics upang ipakita na ang ibang mga salik maliban sa presyo ay mananatiling hindi nagbabago.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Tatlong Pamamaraan sa Pagpapakita ng Supply</h2>
+                <div class="content">
+                    <ol>
+                        <li>Supply Schedule 
+                            <p>Higit na mauunawaan ang konsepto ng supply sa pamamagitan ng Supply schedule. Ang supply schedule ay isang talaan na nagpapakita ng dami ng kaya at gustong ipagbili ng mga prodyuser sa iba’t ibang presyo. Makikita sa ibaba ang supply schedule.</p>
+                            <img src="sched.png" alt="Halimbawa ng Supply Schedule">
+                        </li>
+                        <li>Supply Curve
+                            <p>Maliban sa supply schedule, maipakikita rin ang ugnayan ng presyo sa quantity supplied sa pamamagitan ng isang dayagram o graph, ito ay tinatawag na supply curve. Ito ay isang grapikong paglalarawan ng ugnayan ng presyo at quantity supplied.</p>
+                            <img src="supcurve.png" alt="Halimbawa ng Supply Curve">
+                        </li>
+                        <li>Supply Function
+                            <p>Ang isa pang paraan ng pagpapakita ng ugnayan ng presyo at quantity supplied ay sa pamamagitan ng supply function. Ang supply function ay ang matematikong pagpapakita ng ugnayan ng presyo at quantity supplied. Maaari itong ipakita sa equation sa ibaba:</p>
+                            <img src="function.png" alt="Halimbawa ng Supply Function">
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>Pagkakaiba ng Supply at Quantity Supplied</h2>
+                <div class="content">
+                    <p><strong>Supply</strong> – Tumutukoy sa kabuuang dami ng produkto na kayang ipagbili sa isang takdang panahon at sa iba't ibang presyo.</p>
+                    <p><strong>Quantity Supplied</strong> – Tumutukoy sa dami ng produkto na handang ipagbili ng prodyuser sa isang takdang presyo.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mga Salik na Nakakaapekto sa Supply</h2>
+                <div class="content">
+                    <ul>
+                        <li>Presyo ng Salik ng Produksyon</li>
+                        <li>Teknolohiya</li>
+                        <li>Inaasahang Presyo sa Hinaharap</li>
+                        <li>Pagbabago ng Buwis o Subsideyo</li>
+                        <li>Pagbabago ng Bilang ng Prodyuser</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Paglipat ng Kurba ng Supply</h2>
+                <div class="content">
+                    <p>Ang kurba ng supply ay maaaring lumipat sa kanan (tumaas ang supply) o sa kaliwa (bumaba ang supply). Ang mga salik tulad ng teknolohiya, presyo ng input, o subsideyo ng gobyerno ay nakakaapekto sa paglipat ng kurba ng supply.</p>
+                    <img src="movement.png" alt="Halimbawa ng Paggalaw ng Kurba ng Supply">
+                </div>
+            </section>
+        </div>
+
+</body>
+
+</html>

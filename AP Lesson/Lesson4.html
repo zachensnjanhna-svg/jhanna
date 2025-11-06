@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP / ECONOMICS 9 - Second Quarter - Lesson 4</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      padding-top: 50px;
+    }
+
+    header {
+      background-color: #009688;
+      padding: 70px;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      width: 300px;
+      height: 350px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .card h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #009688;
+      transition: width 0.4s ease;
+    }
+
+    .card h2:hover::after {
+      width: 100%;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 15px 0;
+      margin-bottom: 40px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.3rem;
+      color: #6b4f97;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #6b757d;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+    }
+
+    .lesson-content {
+      padding: 40px;
+      margin: 0 40px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+
+    .lesson-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .lesson-content p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .lesson-content ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .lesson-content h2 {
+        font-size: 1.8rem;
+      }
+
+      .lesson-content p, .lesson-content ul {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-container {
+        padding: 20px;
+      }
+
+      .card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson1.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson2.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson3.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson4.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson5.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson6.html">Lesson 6</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+  <header>
+    <h1>Lesson 4: Estruktura ng Pamilihan</h1>
+  </header>
+
+  <div class="lesson-content">
+    <h2>Estruktura ng Pamilihan</h2>
+    <p>Ang estruktura ng pamilihan ay tumutukoy sa balangkas o kaayusan ng isang pamilihan na nagpapakita ng ugnayan sa pagitan ng mga prodyuser at konsyumer. Ang estrukturang ito ay nakabase sa dami ng mga prodyuser, konsyumer, at kung paano nila kontrolin ang mga presyo at alok ng mga produkto o serbisyo. May dalawang pangunahing uri ng estruktura ng pamilihan: ang ganap na kompetisyon at ang hindi ganap na kompetisyon.</p>
+  </div>
+
+  <div class="lesson-content">
+    <h2>Pamilihang May Ganap na Kompetisyon (Perfectly Competitive Market - PCM)</h2>
+    <p>Ang pamilihang may ganap na kompetisyon ay isang uri ng pamilihan kung saan walang prodyuser o konsyumer ang may kakayahang makontrol ang presyo ng produkto o serbisyo. Narito ang mga pangunahing katangian nito:</p>
+    <ul>
+      <li>Maraming Prodyuser at Konsyumer: Maraming maliliit na prodyuser at konsyumer, kaya't walang makakapag-impluwensiya ng presyo.</li>
+      <li>Magkakatulad na Produkto (Homogeneous Products): Walang kaibahan ang produkto mula sa iba't ibang prodyuser, kaya’t ang konsyumer ay may maraming pagpipilian.</li>
+      <li>Malayang Paggalaw ng Salik ng Produksyon: Ang mga salik ng produksyon (lupa, kapital, paggawa) ay malayang makakapasok at makakalabas sa industriya.</li>
+      <li>Malayang Pagpasok at Paglabas ng mga Prodyuser: Walang hadlang sa mga gustong magtayo ng negosyo at pumasok sa pamilihan.</li>
+      <li>Malayang Impormasyon: Ang lahat ng mamimili at nagbebenta ay may access sa lahat ng impormasyon, lalo na sa presyo ng produkto o serbisyo.</li>
+    </ul>
+    <h3>Halimbawa ng Pamilihang May Ganap na Kompetisyon</h3>
+    <img src="palengke.jpg" alt="Palengke bilang halimbawa ng Pamilihang May Ganap na Kompetisyon">
+  </div>
+
+  <div class="lesson-content">
+    <h2>Pamilihang Hindi Ganap na Kompetisyon (Imperfect Competition)</h2>
+    <p>Ang hindi ganap na kompetisyon ay tumutukoy sa mga pamilihan kung saan may kakayahan ang mga prodyuser o konsyumer na kontrolin ang presyo ng produkto o serbisyo. Narito ang mga uri ng hindi ganap na kompetisyon:</p>
+    <ul>
+      <li><strong>Monopolyo:</strong> Isang uri ng pamilihan kung saan isang prodyuser lamang ang nagbebenta ng isang natatanging produkto o serbisyo, at walang kapalit ang mga produkto o serbisyo nito. Ang monopolyo ay may ganap na kontrol sa presyo at supply ng produkto. Halimbawa: May-ari ng isang pampasaherong tren sa isang lugar.<br>
+      <h3>Halimbawa ng Pamilihang Monopolyo</h3>
+      <img src="monopolyo.jpg" alt="Palengke bilang halimbawa ng Pamilihang Monopolyo">
+      </li>
+      <li><strong>Oligopolyo:</strong> Isang uri ng pamilihan kung saan ilang malalaking prodyuser ang nagkokontrol ng supply ng produkto o serbisyo. Ang mga kumpanya sa oligopolyo ay madalas magtulungan o magpalitan ng impormasyon upang kontrolin ang presyo. Halimbawa: Mga kumpanya sa industriya ng langis o sasakyan.<br>
+      <h3>Halimbawa ng Pamilihang Oligopolyo</h3>
+      <img src="oligopolyo.jpg" alt="Palengke bilang halimbawa ng Pamilihang Oligopolyo">
+      </li>
+      <li><strong>Monopolistikong Kompetisyon:</strong> Isang uri ng pamilihan na may maraming prodyuser, ngunit ang mga produkto ay may pagkakaiba-iba. Ang mga produkto ay hindi ganap na magkakatulad, kaya't may kakayahan ang mga prodyuser na magtakda ng presyo. Halimbawa: Restorant, tindahan ng sapatos, at iba pang mga negosyo na may produkto o serbisyo na may pagkakaiba.<br>
+      <h3>Halimbawa ng Pamilihang Monopolistikong Kompetisyon</h3>
+      <img src="monopolistiko.jpg" alt="Palengke bilang halimbawa ng Pamilihang Monopolistikong Kompetisyon">
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>

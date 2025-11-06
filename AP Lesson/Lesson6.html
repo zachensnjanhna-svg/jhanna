@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP / ECONOMICS 9 - Second Quarter - Lesson 6</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      padding-top: 80px; 
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 10px 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.2rem;
+      color: #6b4f97;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #f7a7b3;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+      transform: scale(1.1);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+     .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 350px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card-front {
+      background-color: #009688;
+      color: white;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .card-back {
+      background-color: #f2f2f2;
+      color: #333;
+      transform: rotateY(180deg);
+      font-size: 1.2rem;
+      text-align: left;
+      padding: 20px;
+    }
+
+     .lesson-content {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .lesson-content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .lesson-content p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .lesson-content ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+
+      .section {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .section ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.7;
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+
+ 
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+      }
+
+      .lesson-content h2 {
+        font-size: 1.8rem;
+      }
+
+      .lesson-content p,
+      .lesson-content ul {
+        font-size: 1.1rem;
+      }
+
+      .card {
+        width: 280px;
+        height: 380px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+        <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson1.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson2.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson3.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson4.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson5.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Lesson6.html">Lesson 6</a>
+   <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/AP%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+
+  <header>
+    <h1 class="lesson-content">Lesson 6: Patakaran sa Presyo</h1>
+  </header>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-front">
+        <h2>Price Ceiling</h2>
+      </div>
+      <div class="card-back">
+        <h3>Price Ceiling (Maksimum na Presyo)</h3>
+        <p>Ang price ceiling ay isang polisiya na itinatakda ng pamahalaan upang kontrolin ang pinakamataas na presyo na maaaring ipataw ng mga prodyuser sa mga kalakal at serbisyo, lalo na ang mga pangunahing pangangailangan.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-front">
+        <h2>Price Floor</h2>
+      </div>
+      <div class="card-back">
+        <h3>Price Floor (Minimun na Presyo)</h3>
+        <p>Ang price floor ay isang polisiya kung saan itinakda ng pamahalaan ang pinakamababang presyo ng mga kalakal at serbisyo, karaniwang ginagamit ito upang protektahan ang mga prodyuser.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Katangian ng Price Ceiling</h3>
+    <ul>
+      <li><strong>Maksimum na Presyo:</strong> Ang pamahalaan ay nagtatakda ng isang pinakamataas na presyo na mas mababa kaysa sa equilibrium price.</li>
+      <li><strong>Suggested Retail Price (SRP):</strong> Ang mga pangunahing produkto tulad ng bigas, asukal, kape, tinapay, at itlog ay may SRP na itinakda ng pamahalaan.</li>
+      <li><strong>Price Freeze:</strong> Sa panahon ng kalamidad, ipinapatupad ang price freeze na nagbabawal sa mga negosyante na magtaas ng presyo.</li>
+      <li><strong>Anti-Profiteering Law:</strong> Ang mga negosyante na magpapataw ng labis na mataas na presyo ay maaaring kasuhan ng paglabag sa batas na ito.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Epekto ng Price Ceiling</h3>
+    <h4>Mabuti:</h4>
+    <ul>
+      <li>Binibigyan nito ang mga konsyumer ng pagkakataon na makabili ng mga pangunahing produkto sa mas abot-kayang presyo.</li>
+      <li>Pinapalakas ang tiwala ng mga mamimili dahil alam nilang hindi tataas nang malaki ang presyo ng mga bilihin, lalo na sa panahon ng krisis.</li>
+    </ul>
+    <h4>Di-mabuti:</h4>
+    <ul>
+      <li>Dahil sa limitadong presyo, maaaring mawalan ng insentibo ang mga prodyuser na magtustos ng mga produkto, kaya nagiging mahirap para sa merkado na makakuha ng sapat na supply.</li>
+      <li>Kapag ang presyo ay mas mababa kaysa sa equilibrium, magkakaroon ng kakulangan sa mga produkto.</li>
+      <li>Dahil sa presyong itinakda ng pamahalaan, may mga negosyante na magbebenta ng mga produkto sa itaas na presyo sa pamamagitan ng mga ilegal na pamilihan.</li>
+    </ul>
+<p> <img src="price.png" alt="Graph ng Price Ceiling"> <img src="ceiling.png" alt="Graph ng Price Ceiling"></p>
+  </div>
+
+
+  <div class="section">
+    <h3>Katangian ng Price Floor</h3>
+    <ul>
+      <li><strong>Minimum na Presyo:</strong> Ang pamahalaan ay nagtatakda ng pinakamababang presyo para sa mga produkto, upang maprotektahan ang mga prodyuser at makamit ang wastong kita.</li>
+      <li><strong>Binibigyan ang mga prodyuser ng seguridad sa kita:</strong> Nagiging dahilan ang price floor upang magkaroon ng regular na kita ang mga prodyuser ng kalakal o serbisyo.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Epekto ng Price Floor</h3>
+    <h4>Mabuti:</h4>
+    <ul>
+      <li>Binibigyan ng proteksyon ang mga prodyuser laban sa pagbagsak ng presyo na magreresulta sa kawalan ng kita.</li>
+      <li>Pinapalakas nito ang industriya ng mga prodyuser, lalo na ang mga agrikulturang sektor.</li>
+    </ul>
+    <h4>Di-mabuti:</h4>
+    <ul>
+      <li>Maaaring magdulot ito ng sobra-sobrang supply at kakulangan sa demand.</li>
+      <li>Ang mga konsyumer ay maaaring mawalan ng access sa mga kalakal dahil sa mataas na presyo.</li>
+    </ul>
+<p> <img src="prices.png" alt="Graph ng Price Floor"> <img src="floor.png" alt="Graph ng Price Floor"></p>
+
+  </div>
+
+</body>
+</html>

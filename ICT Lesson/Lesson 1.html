@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLE / ICT 9 - Second Quarter - Lesson 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 15px;
+      padding: 50px 20px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease-in-out;
+      margin-bottom: 30px;
+    }
+
+    header:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(to left, #ff7e5f, #feb47b);
+      background-clip: text;
+      color: transparent;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    h1:hover {
+      transform: scale(1.1);
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #5d4a74;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.2rem;
+      color: #6b4f97;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+      transform: scale(1.1);
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #f7a7b3;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    .intro {
+      margin: 40px 0;
+    }
+
+    .css-card {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 0 auto;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .css-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .css-card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #8ec5fc;
+    }
+
+    .css-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #5d4a74;
+    }
+
+    .creative {
+      margin-top: 60px;
+    }
+
+    .example-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .css-box {
+      background: linear-gradient(45deg, #f7a7b3, #f7d4d4);
+      color: white;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: floatUp 3s ease-in-out infinite;
+      text-align: justify;
+      padding: 20px;
+    }
+    .css-box p, .css-box h3, .css-box li {
+      color: white;
+    }
+
+    .css-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .cta-button {
+      background-color: #6b4f97;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: #8ec5fc;
+      transform: scale(1.05);
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+      transition: all 0.3s ease-in-out;
+    }
+
+    footer:hover {
+      color: #ffffff;
+      transform: translateY(5px);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .example-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .css-box {
+        width: 90%;
+        height: auto;
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%201.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%202.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%203.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%204.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%205.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%206.html">Lesson 6</a>
+   <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+  <header>
+    <h1>INTRODUCTION TO CSS</h1>
+  </header>
+
+  <section class="intro">
+    <div class="css-card">
+      <h2>What is CSS?</h2>
+      <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are displayed on screen, paper, or in other media.</p>
+      <p>CSS saves a lot of work by controlling the layout of multiple web pages at once. It is stored in external CSS files.</p>
+      <p>CSS separates content from design, making websites easier to maintain and more attractive.</p>
+    </div>
+  </section>
+
+<section class="intro">
+    <div class="css-card">
+      <h2>Why use CSS?</h2>
+      <p>CSS is used to define styles for your web pages, including the design. layout, and variations in display for different devices and screen sizes.</p>
+<p> Provides consistency across web pages.</p>
+<p> Saves time: one CSS file can control multiple pages>.</p>
+<p> Improves accessibility and responsiveness.</p>
+<p>Enhances design wiht layout, colors, and animations.</p>
+    </div>
+</section>
+
+<section class="intro">
+  <div class="css-card">
+<h2> Layers of a Webpage</h2>
+    <img src="layer.jpg" alt="layers of a webpage" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+  </div>
+</section>
+
+  <section class="creative">
+    <h1>Content Layer</h1>
+
+
+    <div class="example-container">
+      <div class="css-box">
+        <h3>What is Content Layer?</h3>
+        <p class="example-container">This is where you define and layout the text, images, animations, sound, video and everything you want to put in a web page with the use of tag. It is the underlying HTML code of that page. Just as a house's frame creates a strong foundatioon upon which the rest of the house is built, a solid foundation of HTML crreates a platform upon which a website can be created.</p>
+      </div>
+
+      <div class="css-box">
+        <h3>Content Layer needs to have</h3><br>
+        <ul>
+        
+<li>Text that are easy to understand.</li> <br>
+<li>Text that makes sense without a visual representation</li> <br>
+<li>Alternative text for every image, sound piece or videos that is content</li><br>
+<liText that is fit for the web.</li></ul>
+      </div>
+      <div class="css-box">
+        <h3>Content Layer needs to have</h3><br>
+        <ul>
+          <li>Explanations of acronym and abbreviations.</li>
+<li>Content images need to be unambiguous for the colorblind and text in images sneeds to have a sufficient size and contrast.</li>
+<li>Information to the users of changes necessary to her environment.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+ <section class="creative">
+    <h1>Presentation Layer</h1>
+    <div class="example-container">
+      <div class="css-box">
+        <h3>What is Presentation Layer?</h3><br>
+        <p>The presentation layer is where you can define how people will see your webpage in a browse.</p>
+      </div>
+      <div class="css-box"><h3>Presentation Layer needs to</h3><br>
+<ul>
+<li>ensure that text can be zoomed without making the site unusable.</li>
+<li>ensure that the interactive wlwmwnt of the site are easy to find.</li>
+<li>ensure that images and foreground and background have enough contrast and are unambiguous to the colorblind.</li>
+</ul>
+      </div>
+      <div class="css-box">
+        <h3>Presentation Layer needs to</h3><br>
+<ul>
+<li>give the site a consistent navigation.</li>
+<li>aid the user through business processes.</li>
+<li>separate content into easily understandable units.</li>
+</ul>
+      </div>
+    </div>
+  </section>
+
+ <section class="creative">
+    <h1>Behavior Layer</h1>
+    <div class="example-container">
+      <div class="css-box">
+        <h3>What is Behavior Layer?</h3><br>
+        <p>The behavior layer is where you have a real-time use interaction with the web page. The interaction may be simple validation of input or filling out a form even a big as web-based programs.</p>
+      </div>
+      <div class="css-box"><h3>Behavior Layer needs to</h3><br>
+<ul>
+<li>ensure that all the functionality is available to the user regardless of input device.</li>
+<li>make the user experience as easy as possible by cutting down on options until they are necessary.</li>
+</ul></div>
+      </div>
+
+  <section class="intro">
+    <div class="css-card">
+      <h2>Benefits of using CSS</h2>
+<h4>CSS saves a lot of work</h4> <br>
+<p>You do not have to code the CSS repeatedly into an HTML file. You just need to write the CSS code once and then reuse the same stylesheet in multiple HTML pages, This saves coding time and space of your hard task.</p> <br>
+<h4> Easy Maintainance</h4><br> <p> You can control the look and layout of several HTML pages at once.</p><br>
+<h4> Adding style to webpage makes it more pleasing to the eye</h4><br> <p> Imprpve the appearance of a website by allowing you to create a much more stylish website since CSS offers a wide arrat of ecpressive style capableness.<p><br>   </div>
+  </section>
+</div>
+
+ <section class="intro">
+    <div class="css-card">
+      <h2>Capabilities of using CSS</h2>
+<ol> 
+<li> CSS makes your pages easily updateable.</li>
+<li>CSS gives you control when placing objects on the page.</li>
+<li>CSS allows you to position objeccts in three dimensions. </li>
+<li>CSS allows you to create custom tags to achieve specialized objectives.</li></div>
+   </section>
+ </div>
+
+<section class="intro">
+    <div class="css-card">
+      <h2>Advantages of using CSS</h2>
+<ol> 
+<li>Save typing and development time.</li>
+<li>Download faster since only one file will be downloaded.</li>
+<li>Faster page loading.</li>
+<li>You can also have multiple link tags in one document </li>
+<li>Better design flexibility</li>
+<li> Easier to maintain and update.</li>
+<li>Separation of structure and style</li></div>
+  </section>
+ </div>
+
+ <a href="https://www.w3schools.com/css/default.asp" target="_blank"> <button class="cta-button">Explore More</button></a>
+
+  <footer>
+    <p>"A Bright Mind is nothing without a Humble Heart."</p>
+  </footer>
+</body>
+</html>

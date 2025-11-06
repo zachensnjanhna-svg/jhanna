@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLE / ICT 9 - Second Quarter - Lesson 3</title>
+  <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e0e5ec;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      color: #333;
+      overflow: auto;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900; 
+      color: #333;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);  
+      background: rgba(255, 255, 255, 0.8);  
+      padding: 15px 30px;
+      margin-bottom: 30px; 
+      border-radius: 10px;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.2rem;
+      color: #6b4f97;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative; 
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      position: absolute;
+      bottom: 0; 
+      left: 0;
+      width: 0; 
+      height: 3px;  
+      background-color: #6b757d; 
+      transition: width 0.3s ease; 
+    }
+
+    nav a:hover::after {
+      width: 100%; 
+    }
+
+    nav a:hover {
+      color: #f7a7b3; 
+    }
+
+ 
+    .content-container {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+      list-style-type: disc;
+      margin-left: 30px;
+    }
+
+   
+     @media (max-width: 768px) {
+      .content-container {
+        padding: 30px;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+
+      section p,
+      ul {
+        font-size: 1rem;
+      }
+
+
+
+  </style>
+</head>
+
+<body>
+
+ <nav>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Home</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%201.html">Lesson 1</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%202.html">Lesson 2</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%203.html">Lesson 3</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%204.html">Lesson 4</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%205.html">Lesson 5</a>
+    <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Lesson%206.html">Lesson 6</a>
+   <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/ICT%20Lesson/Reflection.html">Reflection</a>
+  </nav>
+
+  <h1>Lesson 3: Display Property</h1>
+
+  <div class="content-container">
+
+     <section>
+      <h2>What is the Display Property?</h2>
+      <p>The CSS <strong>display</strong> property allows you to control how an element is displayed on a web page. It determines the behavior of an element in terms of its layout and positioning.</p>
+    </section>
+
+    <section>
+      <h2>Kinds of Elements in CSS</h2>
+      <p>There are different kinds of elements in CSS that affect how content is displayed:</p>
+      <ul>
+        <li><strong>Block-level elements:</strong> These elements take up as much space as possible and will start a new line on the page. Examples include:</li>
+        <ul>
+          <li><code>&lt;p&gt;</code> (Paragraph)</li>
+          <li><code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;dl&gt;</code> (Lists)</li>
+          <li>All headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.)</li>
+          <li><code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code> (Containers)</li>
+        </ul>
+        <li><strong>Inline-level elements:</strong> These elements are laid out horizontally and do not force the content after them to a new line. Examples include:</li>
+        <ul>
+          <li><code>&lt;a&gt;</code> (Anchor/Link)</li>
+          <li><code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> (Text styling)</li>
+          <li><code>&lt;span&gt;</code> (Generic inline container)</li>
+        </ul>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why is This Important?</h2>
+      <p>Understanding how an element behaves when styled with CSS is crucial because the display mode of an element (block vs. inline) affects how it interacts with other elements on the page. Some CSS properties behave differently depending on whether the element is block-level or inline.</p>
+      <p>For example, inline elements cannot contain block-level elements, as demonstrated below:</p>
+      <pre><code>&lt;em&gt; ? Incorrect
+&lt;p&gt;An emphasized paragraph.&lt;/p&gt;
+&lt;p&gt;Another emphasized paragraph.&lt;/p&gt;
+&lt;/em&gt; ? Incorrect</code></pre>
+      <p>The correct way to structure this is to place the inline element inside the block elements:</p>
+      <pre><code>&lt;p&gt;&lt;em&gt;An emphasized paragraph.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Another emphasized paragraph.&lt;/em&gt;&lt;/p&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Property for Display</h2>
+      <p>The <strong>display</strong> property in CSS can take several values, each affecting the element's layout differently:</p>
+      <ul>
+        <li><code>display: inline;</code> - The element is laid out horizontally (inline layout).</li>
+        <li><code>display: block;</code> - The element is laid out vertically (block layout).</li>
+        <li><code>display: list-item;</code> - The element is displayed as a list item (<code>&lt;li&gt;</code>).</li>
+        <li><code>display: none;</code> - The element is removed from the layout entirely and has no effect on the page.</li>
+        <li><code>display: inherit;</code> - The element inherits the display value from its parent element.</li>
+      </ul>
+    </section>
+
+  
+
+    <section>
+      <h2>Div and Span Tags</h2>
+      <p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are used to group content together, but they behave differently:</p>
+      <ul>
+        <li><strong><code>&lt;div&gt;</code>:</strong> A block-level element used to divide the content into sections. It is often used for layout and grouping.</li>
+        <li><strong><code>&lt;span&gt;</code>:</strong> An inline element used to style or structure a part of content without affecting the flow.</li>
+      </ul>
+    </section>
+
+<section class=".section">
+      <h2>Example Code</h2>
+      <img class="image" src="div.png" alt="Example Code"><br>
+      <img class="image" src="span.png" alt="Outcome">
+<br>
+<br>
+
+    </section>
+
+  </div>
+
+
+</body>
+</html>
