@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL SPACE</title>
+    <style>
+        body {
+            font-family: Times New Roman;
+            margin: 0;
+            padding: 0;
+            background-color: #FFE4E1;
+            background-image: url('red.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B0000, #B22222);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        nav a {
+            position: relative;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 0.4rem 0;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 3px;
+            background-color: #FF6347;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        nav a:hover {
+            color: #FF6347;
+            transform: scale(1.05);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: #FF6347;
+        }
+
+        nav a.active::after {
+            width: 100%;
+            background-color: #FF6347;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            nav a {
+                font-size: 1.1rem;
+            }
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        .section {
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            background-color: #8B0000;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        p {
+            color:  #FFE4E1;
+        }
+
+        button {
+            color:  #FFE4E1;
+        }
+
+        div {
+            color:  #FFE4E1;
+        }
+
+        .images-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .images-section img {
+            max-width: 30%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 50px;
+        }
+
+        .social-links a {
+            margin: 0 12px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: white;
+            background: none;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 6px 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #DC143C;
+            transform: scale(1.2);
+        }
+
+        .accordion {
+            background-color: wheat;
+            color: saddlebrown;
+            cursor: pointer;
+            padding: 8px 12px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion:hover {
+            background-color: #f1f1f1;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: peru;
+            margin-top: 10px;
+        }
+
+        .social-links img {
+            max-width: 20px;
+        }
+
+        .social-links a {
+            margin: 0 12px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: white;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #DC143C;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .images-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        audio {
+            width: 100%;
+            max-width: 400px;
+            height: 50px;
+            background-color: #808000;
+            border-radius: 15px;
+            border: 2px solid maroon;
+            padding: 5px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: #808000;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        audio::-webkit-media-controls-pause-button {
+            background-color: #FF6347;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        audio::-webkit-media-controls-playback-progress {
+            background-color: #FF6347;
+            height: 8px;
+            border-radius: 5px;
+        }
+
+        audio::-webkit-media-controls-current-time-display {
+            color: #FF6347;
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: #FF6347;
+        }
+
+        audio::-webkit-media-controls-volume-button {
+            background-color: #FF6347;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main/personal.html">Personal Space</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Lessons</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main/reflection.html">Reflection</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="section personal-info">
+            <h2>Personal Info</h2>
+            <table>
+                <tr>
+                    <td><strong>Name:</strong></td>
+                    <td> Jhanna Solmayor Sanchez</td>
+                </tr>
+                <tr>
+                    <td><strong>Birthday:</strong></td>
+                    <td>October 19, 2010</td>
+                </tr>
+                <tr>
+                    <td><strong>Age:</strong></td>
+                    <td>15</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section images-section">
+            <h2>Images of Me</h2>
+            <div class="images-section">
+                <img src="Image.PNG" alt="Image of me">
+                <img src="Image2.PNG" alt="Image of me">
+                <img src="Image3.PNG" alt="Image of me">
+            </div>
+        </div>
+
+        <div class="section favorites">
+            <h2>Favorites</h2>
+            <button class="accordion">Favorite Food</button>
+            <div class="panel">
+                <p>Fried Chicken, Monggo, Sinigang</p>
+            </div>
+
+            <button class="accordion">Favorite Color</button>
+            <div class="panel">
+                <p>Dark Red, Royal Blue, Periwinkle, Emerald Green, Sunshine Yellow</p>
+            </div>
+
+            <button class="accordion">Favorite Sport</button>
+            <div class="panel">
+                <p>Volleyball</p>
+            </div>
+
+            <button class="accordion">Favorite Place</button>
+            <div class="panel">
+                <p>Park</p>
+            </div>
+        </div>
+
+        <div class="section friends-family">
+            <h2>Friends & Family</h2>
+            <div class="images-section">
+                <img src="fam.jpg" alt="Cousins">
+                <img src="friends.jpg" alt="Friends">
+                <img src="mother.jpg" alt="Family">
+            </div>
+        </div>
+
+        <div class="section song-section">
+            <h2>Favorite Song</h2>
+            <div><strong>Song Title:</strong> Breakeven</div>
+            <div><strong>Artist:</strong> The Script</div>
+            <audio controls>
+                <source src="breakeven.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="section movie-section">
+            <h2>Favorite Movies</h2>
+            <div class="images-section">
+                <img src="fave.jpg" alt="Howl's Moving Castle">
+                <img src="The Wind Rises (2013).jpg" alt="The Wind Rises">
+                <img src="my neighbor totoro.jpg" alt="My Neighbor Totoro">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

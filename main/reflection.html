@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Reflection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('purple.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center; 
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .container {
+            width: 100%; 
+            margin: 0 auto;
+            padding-top: 20px;
+            flex-grow: 1;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4b2c64, #6e3a9a);
+            padding: 0.9rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        nav a {
+            position: relative;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.5px; 
+            padding: 0.4rem 0;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 3px;
+            background-color: #bb69d9;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        nav a:hover {
+            color: #bb69d9;
+            transform: scale(1.05); 
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: #bb69d9;
+        }
+
+        nav a.active::after {
+            width: 100%;
+            background-color: #bb69d9;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            nav a {
+                font-size: 1.1rem;
+            }
+        }
+
+        .heading {
+            background-color: #721378;
+            color: white;
+            font-weight:bold;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .heading-section {
+            background-color: #A813B7;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 40px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 15px;
+        }
+
+        .heading-section h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            flex-direction: column;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section.yellow {
+            background-color: #F4A8FF;
+        }
+
+        .media-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            margin-bottom: 20px;  
+            flex-wrap: wrap; 
+        }
+
+        .media-item {
+            text-align: center;
+            margin-right: 20px;
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; 
+            border-radius: 8px;
+            border: dashed 3px  #721378;
+        }
+
+        .media-item img::after, .media-item video::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: scaleY(-1);
+        }
+
+        .caption {
+            font-family: times new roman;
+            font-size: 1.3em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .media-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .media-item {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 80%;
+            }
+
+            .media-item img, .media-item video {
+                width: 80%; 
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main/personal.html" >Personal Space</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main.html">Lessons</a>
+            <a href="file:///C:/Users/LPCNSHS%20%231/Documents/E%20Portfolio/new/main/reflection.html"> Reflection</a>
+        </nav>
+    </header>
+
+<div class="container">
+
+    <div class="heading">
+        <h1>Events Reflection</h1>
+    </div>
+
+  <div class="heading-section">
+        <h2>Buwan ng Wika</h2>
+    </div>
+
+    <div class="section yellow">
+        <div class="media-container">
+            <div class="media-item">
+                <img src="buwanngwika.jpg" alt="Buwan ng Wika">
+            </div>
+            <div class="media-item">
+                <video controls>
+                    <source src="buwanngwika.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-item">
+                <img src="bw.jpg" alt="Buwan ng Wika">
+            </div>
+        </div>
+
+        <div class="caption">
+The most important thing I learned from the event is having pride in being a filipino, it showed me the different aspects of having nationalism, and that is to be proud of my nationality. Buwan ng wika showed different cultures of our country and it made me appreciate the history of our beloved country. <br>
+I can apply what I have learned by also promoting our country to everyone, and also make everyone appreciate our culture more, especially for youths.<br>
+Yes, I actively participate in the event by wearing my baro&apos;t saya every monday to show my participation.<br>
+I would explain it by showing different videos of Filipinos teaching our literature and values, to make them learn a much wider vocabulary that shows the values of Filipinos, especially for youths that aren&apos;t fluent in their own native language.<br>
+It is important to have this event because it not only makes us learn and practice different talents but also makes us appreciate how wide and complex our own country and language is.
+        </div>
+    </div>
+
+<div class="heading-section">
+        <h2>Intramurals </h2
+    </div> </div>
+    <div class="section yellow">
+        <div class="media-container">
+            <div class="media-item">
+                <img src="intra.jpg" alt="Intramurals">
+            </div>
+            <div class="media-item">
+                <video controls>
+                    <source src="intrams.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-item">
+                <img src="intrams.jpg" alt="Intramurals">
+            </div>
+        </div>
+        <div class="caption">
+For me, the most important thing I have learned in this event is cooperation and perseverance, because in volleyball or in any other team sport, you are not playing alone, you have your team to support and guide you. And that skills alone will not make you win, you also need perseverance to practice.<br>
+I can apply what I learned by persevering even though it&apos;s hard to keep up and even with failures and doubts, I will still try to win.<br>
+I actively participated in this event by playing volleyball in team green Alcala, in which we won 3rd place.<br>
+I would focus on making them practice matches because it&apos;s the experience that makes us learn, and with the mistakes we did, we can get better each match.<br>
+It is important to have this event to practice  sportsmanship in every team and to make the students learn the importance of cooperation and practice.
+        </div>
+    </div>
+
+  <div class="heading-section">
+        <h2>Science Month</h2>
+    </div>
+    <div class="section yellow">
+        <div class="media-container">
+            <div class="media-item">
+                <img src="sciencemonth.jpg" alt="Science Month">
+            </div>
+            <div class="media-item">
+                <video controls>
+                    <source src="sciencemonth.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-item">
+                <img src="science.jpg" alt="Science Month">
+            </div>
+        </div>
+        <div class="caption">
+This Science month event made me learn the most important thing in development and our daily life and that is technology and innovation. Technology makes our life much easier and better with it, but without the innovation of man, technology can&apos;t and will not exist&mdash; it shows us that technology came from man, so man should control technology, not the other way.<br>
+I can apply what I&apos;ve learned by being innovative and should think of solutions for the problems that made our life hard. And also by limiting technology dependency and living with it, not in it.<br>
+I actively participated in this event by supporting my classmates for the joining competitions arranged by the science department, and I also participated by presenting our research title that won outstanding research title.<br>
+I would explain it by focusing on the effect of technology in our lives, especially the good ones. And also the effects without technology, it will make our life harder with manual work. I would explain innovation by showing different inventions of different inventors throughout history and how it made people&apos;s life easier.<br>
+It is important to have this event because it tests how students can be innovative, it trains their minds to create something new, something that will help humanity.
+        </div>
+    </div>
+
+  <div class="heading-section">
+        <h2>Teachers' Day</h2>
+    </div>
+    <div class="section yellow">
+        <div class="media-container">
+            <div class="media-item">
+                <img src="teach.jpeg" alt="Teachers' Day">
+            </div>
+            <div class="media-item">
+                <video controls>
+                    <source src="teachersday.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-item">
+                <img src="day.jpeg" alt="Teachers' Day">
+            </div>
+        </div>
+        <div class="caption">
+The important thing I have learned in this event is to appreciate teachers for their contribution in our life. Teachers are important in our world, the importance of the role of teachers and without them we will not learn things that we need in our daily life and we need to recognize and acknowledge their sacrifices just to teach us.<br>
+I can apply what I&apos;ve learned in real life situations by respecting teachers, making them feel appreciated for the effort to teach me and use the lessons they&apos;ve taught me in my life.<br>
+I actively participated in the event by participating in arranging the celebration for our teachers and I was the emcee in our classroom-based celebration. <br>
+I would explain it by focusing on the importance of the lessons they have taught us that we have used in our daily life.<br>
+It is important to have this event because by celebrating Teachers&apos; Day we can make them feel loved, special, and appreciated. The teachers need to see that the students know how much effort they put in their teaching and let the teachers know that students appreciate their effort to teach them.
+        </div>
+    </div>
+
+  <div class="heading-section">
+        <h2> Cluster Meet</h2>
+    </div>
+    <div class="section yellow">
+        <div class="media-container">
+            <div class="media-item">
+                <img src="cluster.jpg" alt=" Cluster Meet">
+            </div>
+            <div class="media-item">
+                <video controls>
+                    <source src="cluster.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-item">
+                <img src="meet.jpg" alt=" Cluster Meet">
+            </div>
+        </div>
+        <div class="caption">
+The most important thing I have learned in this event is the importance of emotional support. The athletes need support from their peers, teachers, and parents because It makes them feel confident. And  I also learned to play fair because a victory from manipulation is not a real win, but rather you are lying to yourself because you cannot win in your own capabilities.<br>
+I can apply what I&apos;ve learned in real life situations by supporting everyone and making them feel confident in their own talent, that they can achieve victory without manipulation or cheating thus making them avoid playing unfair. <br>
+I didn&apos;t actively participate in this event but I cheered for our school representatives for each sport. The athletes played well and some of them won places in their sports.<br>
+I would explain it by focusing on the sports they like because I can teach them about the importance of sports while also making them feel like they are also playing.
+It is important to have this event because it encourages students to have fun with sports, it also makes them happy and feel stress free when playing the sports they are passionate about.
+        </div>
+    </div>
+
+  <div class="heading-section">
+        <h2>A.P Month</h2>
+    </div>
+    <div class="section yellow">
+        <div class="media-container">
+            <div class="media-item">
+                <img src="ap.jpg" alt="A.P Month">
+            </div>
+            <div class="media-item">
+                <video controls>
+                    <source src="ap.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="media-item">
+                <img src="month.jpg" alt="A.P Month">
+            </div>
+        </div>
+        <div class="caption">
+The most important thing  I have learned is the importance of protecting the West Philippine Sea in our country, especially for the fishermen. Not only for their means of livelihood but also for the Filipino&apos;s trust in our government to protect our territory. It&apos;s because if other countries take over the West Philippine Sea it would mean that the government can&apos;t protect its own country, moreover people.<br>
+I can apply what I&apos;ve learned by being aware politically and knowing problems or issues that are happening in our country, because it&apos;s much better to know and be aware than be oblivious of the situation your own country is in. Other than being aware, it&apos;Ss also best to know who to vote for our government, to know who&apos;s righteous for the position.<br>
+I actively participated in this event by attending the seminar that the AP department arranged and being aware of our control and issues happening in our sea.<br>
+I would explain it by focusing on the importance of protecting our country because it not only shows other countries that they can&apos;t take our territory but also for the sake of being a country that trusts its government.<br>
+It is important to have this event because it makes students much more aware of how important it is to be aware of the situation we are in. And it also teach students to know the truth behind those claims to avoid believing in fake news
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
