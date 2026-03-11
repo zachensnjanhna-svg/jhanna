@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TLE / ICT 9 - Fourth Quarter - Lesson 2</title>
+
+<style>
+body {
+font-family:'Arial',sans-serif;
+margin:0;
+padding:0;
+min-height:100vh;
+background:url('https://images.unsplash.com/photo-1521747116042-5a810fda9664') no-repeat center center fixed;
+background-size:cover;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:auto;
+}
+
+.container{
+width:100%;
+max-width:1200px;
+padding:20px;
+box-sizing:border-box;
+text-align:center;
+background-color:rgba(255,255,255,0.8);
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin:0 auto;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(255,255,255,0.8);
+border-radius:20px;
+padding:10px 0;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+z-index:10;
+}
+
+nav a{
+font-size:1.2rem;
+color:#6b4f97;
+margin:0 15px;
+text-decoration:none;
+font-weight:600;
+text-transform:uppercase;
+transition:.3s;
+}
+
+nav a:hover{
+color:#f7a7b3;
+transform:scale(1.1);
+}
+
+.quarter{
+margin-left:30px;
+}
+
+.quarter select{
+padding:5px 8px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+cursor:pointer;
+}
+
+header{
+background:rgba(255,255,255,0.2);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(8px);
+box-shadow:0px 10px 30px rgba(0,0,0,0.2);
+margin-top:80px;
+}
+
+header h1{
+font-size:3.5rem;
+margin-bottom:20px;
+color:#333;
+}
+
+.content-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-around;
+gap:30px;
+margin-top:40px;
+padding:20px;
+}
+
+section{
+background-color:rgba(255,255,255,0.85);
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+min-height:300px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+position:relative;
+overflow:hidden;
+}
+
+section h2{
+font-size:2.2rem;
+color:#6b4f97;
+transition:.4s;
+}
+
+section .content{
+opacity:0;
+transform:translateY(20px);
+transition:.4s;
+}
+
+section:hover .content{
+opacity:1;
+transform:translateY(0);
+}
+
+section:hover h2{
+opacity:0;
+}
+
+p,ul{
+font-size:1.2rem;
+color:#555;
+line-height:1.6;
+}
+
+ul{
+margin-left:30px;
+}
+
+.code-block{
+background:#2e2e2e;
+color:white;
+padding:20px;
+border-radius:5px;
+margin:20px 0;
+font-family:monospace;
+white-space:pre-wrap;
+}
+
+@media(max-width:768px){
+.content-container{flex-direction:column}
+header h1{font-size:2.5rem}
+section{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/main.html">Home</a>
+<a href="Lesson1.html">Lesson 1</a>
+<a href="Lesson2.html">Lesson 2</a>
+<a href="Lesson3.html">Lesson 3</a>
+<a href="Lesson4.html">Lesson 4</a>
+<a href="Lesson5.html">Lesson 5</a>
+<a href="Lesson6.html">Lesson 6</a>
+<a href="Reflection.html">Reflection</a>
+
+<div class="quarter">
+<select onchange="location=this.value">
+<option value="">Quarter 4</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 2</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 3</option>
+</select>
+</div>
+
+</nav>
+
+<div class="container">
+
+<header>
+<h1>LESSON 2: Scripts</h1>
+</header>
+
+<div class="content-container">
+
+<section>
+<h2>Where Can You Place Scripts?</h2>
+<div class="content">
+<p>JavaScript codes can be placed in different sections of an HTML document depending on when they should execute. Scripts may run before the page loads, when the page loads, or when a specific event occurs.</p>
+</div>
+</section>
+
+<section>
+<h2>Scripts in the HEAD</h2>
+<div class="content">
+<p>Scripts placed in the <b>HEAD</b> section are pre-loaded. This means the script runs before the user triggers an event.</p>
+
+<div class="code-block">
+&lt;script type="text/javascript"&gt;
+function intro() {
+alert("Welcome Visitor!");
+}
+&lt;/script&gt;
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Scripts in the BODY</h2>
+<div class="content">
+<p>Scripts inside the <b>BODY</b> section run when the webpage loads.</p>
+
+<div class="code-block">
+&lt;script type="text/javascript"&gt;
+document.write("Message by JavaScript");
+&lt;/script&gt;
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>HEAD & BODY Scripts</h2>
+<div class="content">
+<p>JavaScript can be placed in both the HEAD and BODY sections depending on the needs of the program.</p>
+
+<div class="code-block">
+Head Section
+document.write("Head Section");
+
+Body Section
+document.write("Body Section");
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>External JavaScript</h2>
+<div class="content">
+<p>External JavaScript files allow one script to control multiple HTML files. These files are saved with a <b>.js</b> extension.</p>
+
+<div class="code-block">
+&lt;script src="myJavaScript.js"&gt;&lt;/script&gt;
+</div>
+
+<p>The <b>src</b> attribute tells the browser where the external JavaScript file is located.</p>
+
+</div>
+</section>
+
+<section>
+<h2>Comments in JavaScript</h2>
+<div class="content">
+<p>Comments are used to explain code or temporarily disable lines during debugging.</p>
+
+<div class="code-block">
+// Single line comment
+
+/* 
+Multiple line comment
+*/
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>JavaScript Guidelines</h2>
+<div class="content">
+<ul>
+<li>Case Sensitive</li>
+<li>White Space</li>
+<li>Breaking Up Code Lines</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Case Sensitive</h2>
+<div class="content">
+<p>JavaScript distinguishes between uppercase and lowercase letters.</p>
+<p>Example: <b>myHome</b> is different from <b>MyHome</b>.</p>
+</div>
+</section>
+
+<section>
+<h2>White Space</h2>
+<div class="content">
+<p>JavaScript ignores extra spaces but they help make code easier to read.</p>
+
+<div class="code-block">
+var name = "Grace";
+
+var name="Grace";
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Breaking Code Lines</h2>
+<div class="content">
+<p>You can break long lines using a backslash (\).</p>
+
+<div class="code-block">
+document.write("wow\Philippines");  // Accepted
+
+document.\write("wow Philippines"); // Not accepted
+</div>
+
+</div>
+</section>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLE / ICT 9 - Fourth Quarter - Lesson 3</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e0e5ec;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      color: #333;
+      overflow: auto;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #333;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      font-size: 1.2rem;
+      color: #6b4f97;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f7a7b3;
+    }
+
+    .quarter{
+    margin-left:30px;
+    }
+
+    .quarter select{
+    padding:5px 8px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+    cursor:pointer;
+    }
+    
+    .content-container {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    ul {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+      list-style-type: disc;
+      margin-left: 30px;
+    }
+
+    pre{
+      background:#f3f3f3;
+      padding:10px;
+      border-radius:6px;
+      margin-top:10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/main.html">Home</a>
+<a href="Lesson1.html">Lesson 1</a>
+<a href="Lesson2.html">Lesson 2</a>
+<a href="Lesson3.html">Lesson 3</a>
+<a href="Lesson4.html">Lesson 4</a>
+<a href="Lesson5.html">Lesson 5</a>
+<a href="Lesson6.html">Lesson 6</a>
+<a href="Reflection.html">Reflection</a>
+</div>
+
+<div class="quarter">
+<select onchange="location=this.value">
+<option value="">Quarter 4</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 2</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 3</option>
+
+</select>
+</div>
+</nav>
+
+<h1>LESSON 3: Characteristics of JavaScript</h1>
+
+<div class="content-container">
+
+<section>
+<h2>Characteristics of JavaScript</h2>
+
+<p><strong>1. Interpreted Language</strong> &#45; JavaScript requires a browser to run. It works together with HTML and its source code can easily be viewed when checking the source code of a webpage.</p>
+
+<p><strong>2. Scripting Language</strong> &#45; JavaScript is used to perform simple repetitive tasks and modify parts of a webpage through the browser.</p>
+
+<p><strong>3. Client-Side Scripting</strong> &#45; JavaScript runs on the user&apos;s computer (client) rather than the server.</p>
+
+<p><strong>4. Object-Oriented Programming</strong> &#45; JavaScript treats many parts of the webpage as objects that can be manipulated using methods and properties.</p>
+
+</section>
+
+<section>
+
+<h2>The Key in Understanding JavaScript</h2>
+
+<ul>
+<li>Learn at an optimal pace and practice frequently.</li>
+<li>Understand the concept of objects.</li>
+</ul>
+
+<p><strong>Objects</strong> &#45; items that exist in the browser such as the browser window or webpage.</p>
+
+<p><strong>Methods</strong> &#45; actions performed by an object.</p>
+
+<p><strong>Properties</strong> &#45; characteristics of an object.</p>
+
+<p><strong>Event</strong> &#45; an action such as clicking a link or loading a page.</p>
+
+<p><strong>Parameter</strong> &#45; information passed to a function.</p>
+
+<p><strong>Type</strong> &#45; the kind of data stored in a variable.</p>
+
+<p><strong>Type Conversion</strong> &#45; converting one type of data to another.</p>
+
+</section>
+
+<section>
+
+<h2>Commonly Used Properties and Methods</h2>
+
+<ul>
+<li><strong>Window</strong> &#45; the main JavaScript object.</li>
+<li><strong>location</strong> &#45; used to go to another webpage.</li>
+<li><strong>open()</strong> &#45; opens a new browser window.</li>
+<li><strong>setTimeout()</strong> &#45; runs an action after a time delay.</li>
+</ul>
+
+<ul>
+<li><strong>document.write()</strong> &#45; displays a message on a webpage.</li>
+<li><strong>lastModified</strong> &#45; shows the last modified date of a page.</li>
+</ul>
+
+<ul>
+<li><strong>Math.PI</strong> &#45; value of PI.</li>
+<li><strong>Math.max()</strong> &#45; returns the largest number.</li>
+<li><strong>Math.min()</strong> &#45; returns the smallest number.</li>
+</ul>
+
+<ul>
+<li><strong>navigator.appName</strong> &#45; browser name.</li>
+<li><strong>navigator.appVersion</strong> &#45; browser version.</li>
+<li><strong>navigator.platform</strong> &#45; operating system.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Example JavaScript Code</h2>
+
+<pre>
+document.write("Hello World");
+</pre>
+
+<p>This code tells JavaScript to display the message &apos;Hello World&apos; on the webpage.</p>
+
+</section>
+
+<section>
+
+<h2>JavaScript Variables</h2>
+
+<p>A variable is a container that stores a value which can change during program execution.</p>
+
+<pre>
+var firstname = "Crispin";
+</pre>
+
+</section>
+
+<section>
+
+<h2>Data Types</h2>
+
+<ul>
+<li>Character</li>
+<li>String</li>
+<li>Integer</li>
+<li>Float</li>
+<li>Boolean</li>
+<li>Function</li>
+<li>Object</li>
+<li>Array</li>
+<li>Undefined</li>
+<li>Null</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Rules for Naming Variables</h2>
+
+<ul>
+<li>Use letters, numbers, and underscores.</li>
+<li>No spaces are allowed.</li>
+<li>The first character cannot be a number.</li>
+<li>Variable names are case-sensitive.</li>
+</ul>
+
+</section>
+
+</div>
+
+</body>
+</html>

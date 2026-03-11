@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>E Portfolio Portal</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align: center;
+color: white;
+
+background-image: url('back.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.container{
+margin-top:120px;
+background-color: azure;
+color:darkblue;
+width:400px;
+margin-left:auto;
+margin-right:auto;
+padding:30px;
+border-radius:12px;
+}
+
+button{
+background-color: orange;
+border:none;
+padding:10px 20px;
+font-size:16px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background-color:red;
+}
+
+.links{
+margin-top:20px;
+display:none;
+}
+
+.links a{
+display:block;
+margin:10px;
+padding:10px;
+background-color:#00c6ff;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.links a:hover{
+background-color:#0072ff;
+}
+
+</style>
+
+<script>
+
+function enterPortal(){
+
+var name = prompt("Enter your name to access the E-Portfolio:");
+
+if(name != "" && name != null){
+
+document.getElementById("message").innerHTML =
+"Welcome " + name + "! Click a section below.";
+
+document.getElementById("sites").style.display = "block";
+
+document.getElementById("enterBtn").style.display = "none";
+
+}
+
+else{
+
+alert("Please enter your name first.");
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>E Portfolio</h1>
+
+<p id="message">Click the button to enter</p>
+
+<button id="enterBtn" onclick="enterPortal()">Enter</button>
+
+<div class="links" id="sites">
+
+<a href="https://zachensnjanhna-svg.github.io/jhanna/main/personal.html">
+Personal Space
+</a>
+
+<a href="https://zachensnjanhna-svg.github.io/jhanna/main.html">
+ICT Portfolio
+</a>
+
+<a href="https://zachensnjanhna-svg.github.io/jhanna/ap.html">
+AP Portfolio
+</a>
+
+<a href="https://zachensnjanhna-svg.github.io/jhanna/main/reflection.html">
+Reflection
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

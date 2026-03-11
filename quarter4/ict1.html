@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TLE / ICT 9 - Fourth Quarter - Lesson 1</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Arial',sans-serif;
+background:linear-gradient(135deg,#e0c3fc,#8ec5fc);
+color:#333;
+text-align:center;
+padding:20px;
+}
+
+header{
+background-color:rgba(255,255,255,0.7);
+border-radius:15px;
+padding:50px 20px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+backdrop-filter:blur(5px);
+transition:transform .3s;
+margin-bottom:30px;
+}
+
+header:hover{
+transform:translateY(-10px);
+box-shadow:0px 15px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+font-size:3.5rem;
+font-weight:700;
+background:linear-gradient(to left,#ff7e5f,#feb47b);
+background-clip:text;
+color:transparent;
+text-shadow:2px 2px 10px rgba(0,0,0,0.3);
+margin-bottom:10px;
+}
+
+nav{
+display:flex;
+justify-content:center;
+background-color:rgba(255,255,255,0.8);
+border-radius:20px;
+padding:10px 0;
+margin-bottom:20px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+flex-wrap:wrap;
+}
+
+nav a{
+font-size:1.1rem;
+color:#6b4f97;
+margin:0 15px;
+text-decoration:none;
+font-weight:600;
+text-transform:uppercase;
+transition:.3s;
+}
+
+nav a:hover{
+color:#f7a7b3;
+transform:scale(1.1);
+}
+
+.quarter{
+margin-left:30px;
+}
+
+.quarter select{
+padding:5px 8px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+cursor:pointer;
+}
+
+.intro{
+margin:40px 0;
+}
+
+.css-card{
+background:rgba(255,255,255,0.6);
+padding:30px;
+border-radius:10px;
+box-shadow:0px 4px 20px rgba(0,0,0,0.3);
+max-width:900px;
+margin:0 auto;
+transition:transform .3s;
+text-align:left;
+}
+
+.css-card:hover{
+transform:translateY(-10px);
+}
+
+.css-card h2{
+font-size:2rem;
+margin-bottom:15px;
+color:#8ec5fc;
+}
+
+.css-card p,
+.css-card li{
+line-height:1.6;
+margin-bottom:8px;
+}
+
+.example-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:30px;
+}
+
+.css-box{
+background:linear-gradient(45deg,#f7a7b3,#f7d4d4);
+color:white;
+padding:20px;
+width:30%;
+border-radius:15px;
+box-shadow:0px 10px 20px rgba(0,0,0,0.15);
+transition:.3s;
+text-align:left;
+}
+
+.css-box:hover{
+transform:scale(1.08);
+}
+
+footer{
+margin-top:60px;
+font-style:italic;
+}
+
+@media(max-width:800px){
+.css-box{width:90%;}
+h1{font-size:2.3rem;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/main.html">Home</a>
+<a href="Lesson1.html">Lesson 1</a>
+<a href="Lesson2.html">Lesson 2</a>
+<a href="Lesson3.html">Lesson 3</a>
+<a href="Lesson4.html">Lesson 4</a>
+<a href="Lesson5.html">Lesson 5</a>
+<a href="Lesson6.html">Lesson 6</a>
+<a href="Reflection.html">Reflection</a>
+</div>
+
+<div class="quarter">
+<select onchange="location=this.value">
+<option value="">Quarter 4</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 2</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 3</option>
+
+</select>
+</div>
+</nav>
+
+<header>
+<h1>LESSON 1:JavaScript</h1>
+</header>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>Purpose of JavaScript</h2>
+<p>JavaScript is used to create dynamic and interactive user experiences on websites. It handles user interface rendering, content loading, real-time updates, personalized feeds, video controls, and tracking user activity.</p>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>Static vs Dynamic Websites</h2>
+
+<p><b>Static Web Page:</b> A web page that is delivered exactly as stored and does not change unless manually edited.</p>
+<p><b>Example:</b> Photographer&apos;s portfolio website.</p>
+
+<br>
+
+<p><b>Dynamic Website:</b>  A website that changes content depending on user actions, preferences, or other variables.</p>
+<p><b>Example:</b> Social media platforms.</p>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>About JavaScript</h2>
+
+<ul>
+<li>The most popular and widely used scripting language on the internet.</li>
+<li>Recognized and supported by all major web browsers.</li>
+<li>Developed by <b>Brendan Eich</b> at Netscape under the name <b>Mocha</b>, later renamed to <b>LiveScript</b>.</li>
+<li>Opened to Internet Explorer in 1996.</li>
+<li>A trademark of the Oracle Corporation and licensed to organizations such as Mozilla Foundation.</li>
+<li>Enhances web pages and can even be used to build video games.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>Characteristics of JavaScript</h2>
+
+<ul>
+<li>Client-side scripting language (runs on the user&apos;s computer).</li>
+<li>High-level scripting language (similar to English).</li>
+<li>Interpreted language (converted into machine code during execution).</li>
+<li>Object-oriented programming language.</li>
+<li>Case-sensitive.</li>
+<li>Semi-colons at the end of statements are optional.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>What Can JavaScript Do?</h2>
+
+<ul>
+<li>React to events such as mouse clicks.</li>
+<li>Validate form data.</li>
+<li>Create cookies.</li>
+<li>Enhance and make web pages interactive.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="creative">
+
+<h1>JavaScript Concepts</h1>
+
+<div class="example-container">
+
+<div class="css-box">
+<h3>Events</h3>
+<p>Events are actions such as mouse clicks or page loading that trigger JavaScript code.</p>
+</div>
+
+<div class="css-box">
+<h3>Form Validation</h3>
+<p>JavaScript checks user input in forms before the data is sent to the server, saving time and resources.</p>
+</div>
+
+<div class="css-box">
+<h3>Cookies</h3>
+<p>Cookies store information on a visitor’s computer to remember preferences or monitor user activity.</p>
+</div>
+
+<div class="css-box">
+<h3>Dynamic Websites</h3>
+<p>Platforms like Google, YouTube, and Facebook use JavaScript for real-time updates, streaming, and interactive features.</p>
+</div>
+
+<div class="css-box">
+<h3>DHTML Effects</h3>
+<p>JavaScript combined with CSS can create effects like message scrollers, animations, and visual effects.</p>
+</div>
+
+<div class="css-box">
+<h3>User Interaction</h3>
+<p>JavaScript detects user actions such as clicks, typing, or scrolling to create responsive web pages.</p>
+</div>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>Advantages of JavaScript</h2>
+
+<ul>
+<li>Lightweight programming language.</li>
+<li>Works on all modern browsers.</li>
+<li>Easy to learn and beginner-friendly.</li>
+<li>No special tools required.</li>
+<li>Large online developer community.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>Disadvantages of JavaScript</h2>
+
+<ul>
+<li>Some browsers disable JavaScript for security reasons.</li>
+<li>JavaScript code can be viewed by users.</li>
+<li>Malicious scripts may affect security.</li>
+<li>Code can be reverse engineered.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>Note</h2>
+
+<p>A script is a set of computer instructions that connects components to accomplish tasks. JavaScript is a powerful scripting language used to create web functionalities.</p>
+
+<p>The main tools needed for JavaScript are:</p>
+
+<ul>
+<li>A text editor</li>
+<li>A web browser</li>
+</ul>
+
+<p>The basic components of JavaScript include:</p>
+
+<ul>
+<li>Objects</li>
+<li>Methods</li>
+<li>Properties</li>
+</ul>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="css-card">
+
+<h2>How to Start Using JavaScript</h2>
+
+<p>The <b>&lt;script&gt;&lt;/script&gt;</b> tag is used to add JavaScript in an HTML page.</p>
+
+<p>Example:</p>
+
+<pre>
+&lt;script&gt;
+document.write("Hello World");
+&lt;/script&gt;
+</pre>
+
+</div>
+</section>
+
+<footer>
+<p>"A Bright Mind is nothing without a Humble Heart."</p>
+</footer>
+
+</body>
+</html>

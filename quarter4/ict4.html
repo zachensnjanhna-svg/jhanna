@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TLE / ICT 9 - Fourth Quarter - Lesson 4</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Arial',sans-serif;
+background-color:#f4f4f4;
+color:#333;
+text-align:center;
+margin:0;
+padding:0;
+padding-top:50px;
+}
+
+header{
+background-color:#009688;
+padding:70px;
+color:white;
+height:180px;
+}
+
+h1{
+font-size:3.5rem;
+margin-bottom:30px;
+}
+
+nav{
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:rgba(255,255,255,0.8);
+border-radius:20px;
+padding:15px 0;
+margin-bottom:40px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+font-size:1.3rem;
+color:#6b4f97;
+margin:0 20px;
+text-decoration:none;
+font-weight:600;
+text-transform:uppercase;
+position:relative;
+transition:color 0.3s ease;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+bottom:0;
+left:0;
+width:0;
+height:3px;
+background-color:#6b757d;
+transition:width 0.3s ease;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+nav a:hover{
+color:#f7a7b3;
+}
+
+.quarter{
+margin-left:30px;
+}
+
+.quarter select{
+padding:5px 8px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+cursor:pointer;
+}
+
+.lesson-content{
+padding:40px;
+margin:0 40px;
+background-color:#fff;
+border-radius:12px;
+box-shadow:0 6px 12px rgba(0,0,0,0.1);
+margin-bottom:40px;
+}
+
+.lesson-content h2{
+font-size:2.5rem;
+margin-bottom:15px;
+color:#333;
+}
+
+.lesson-content p{
+font-size:1.2rem;
+color:#555;
+line-height:1.7;
+}
+
+.lesson-content ul{
+font-size:1.2rem;
+color:#555;
+line-height:1.7;
+list-style-type:disc;
+margin-left:40px;
+}
+
+pre{
+background:#eee;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+overflow:auto;
+}
+
+@media (max-width:768px){
+
+.lesson-content h2{
+font-size:1.8rem;
+}
+
+.lesson-content p,
+.lesson-content ul{
+font-size:1.1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/main.html">Home</a>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Lesson1.html">Lesson 1</a>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Lesson2.html">Lesson 2</a>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Lesson3.html">Lesson 3</a>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Lesson4.html">Lesson 4</a>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Lesson5.html">Lesson 5</a>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Lesson6.html">Lesson 6</a>
+<a href="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Reflection.html">Reflection</a>
+</div>
+
+<div class="quarter">
+<select onchange="location=this.value">
+<option value="">Quarter 4</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 2</option>
+<option value="https://zachensnjanhna-svg.github.io/jhanna/AP%20Lesson/Quarter2.html">Quarter 3</option>
+
+</select>
+</div>
+</nav>
+
+<header>
+<h1>LESSON 4: Events</h1>
+</header>
+<br>
+<br>
+
+
+<div class="lesson-content">
+
+<h2>What are Events?</h2>
+
+<p>
+Events are actions that are triggered by user activities such as mouse clicks, keyboard strokes,
+loading images, submitting forms, or calling functions. Events are usually connected with functions
+because functions need something to trigger them before they can run.
+</p>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Common Event Triggers</h2>
+
+<ul>
+<li><b>onclick</b> &#45; triggered when an object is clicked.</li>
+<li><b>ondblclick</b> &#45; triggered when an object is double-clicked.</li>
+<li><b>onkeydown</b> &#45; triggered when a keyboard key is pressed.</li>
+<li><b>onkeyup</b> &#45; triggered when a keyboard key is released.</li>
+<li><b>onmouseover</b> &#45; triggered when the mouse moves over an element.</li>
+<li><b>onmouseout</b> &#45; triggered when the mouse moves away from an element.</li>
+<li><b>onload</b> &#45; triggered when a page or image finishes loading.</li>
+<li><b>onunload</b> &#45; triggered when the user exits the page.</li>
+<li><b>onsubmit</b> &#45; triggered when a form is submitted.</li>
+<li><b>onchange</b> &#45; triggered when a user changes the value of a field.</li>
+</ul>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>onload and onunload</h2>
+
+<p>
+The <b>onload</b> and <b>onunload</b> events are triggered when a user enters or leaves a webpage.
+They can also be used for checking browser versions or storing and retrieving cookies.
+A cookie is a message sent to a web browser for storing information.
+</p>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>onfocus, onblur, and onchange</h2>
+
+<p>
+These attributes are commonly used for validating form fields.
+</p>
+
+<ul>
+<li><b>onfocus</b> &#45; triggered when an element gets focus.</li>
+<li><b>onblur</b> &#45; triggered when an element loses focus.</li>
+<li><b>onchange</b> &#45; triggered when the value of a field changes.</li>
+</ul>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Popup Boxes</h2>
+
+<p>
+Popup boxes are windows that appear on the screen. They are used to warn users,
+collect information, or ask for confirmation. JavaScript has three types of popup boxes:
+</p>
+
+<ul>
+<li>Alert Box</li>
+<li>Prompt Box</li>
+<li>Confirm Box</li>
+</ul>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Alert Box</h2>
+
+<p>
+An alert box displays a warning or message to the user.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+alert("WARNING!");
+</pre>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Prompt Box</h2>
+
+<p>
+A prompt box asks the user to enter information before continuing.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+var name = prompt("Please enter your name:", "nameless");
+</pre>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Confirm Box</h2>
+
+<p>
+A confirm box asks the user to verify an action. The user can choose OK or Cancel.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+confirm("Do you want to proceed?");
+</pre>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Variables</h2>
+
+<p>
+A variable is a temporary storage for values or expressions.
+Expressions are formulas that use numbers and operators.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+var x = 5;
+var y = x + 5;
+</pre>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Arithmetic Operators</h2>
+
+<ul>
+<li>+ Addition</li>
+<li>- Subtraction</li>
+<li>* Multiplication</li>
+<li>/ Division</li>
+<li>% Modulus</li>
+<li>++ Increment</li>
+<li>-- Decrement</li>
+</ul>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Comparison Operators</h2>
+
+<ul>
+<li>== equal to</li>
+<li>=== equal value and type</li>
+<li>!= not equal</li>
+<li>!== not equal value or type</li>
+<li>&gt; greater than</li>
+<li>&lt; less than</li>
+<li>&gt;= greater than or equal</li>
+<li>&lt;= less than or equal</li>
+</ul>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Logical Operators</h2>
+
+<ul>
+<li>&& AND</li>
+<li>|| OR</li>
+<li>! NOT</li>
+</ul>
+
+</div>
+
+
+<div class="lesson-content">
+
+<h2>Conditional Statements</h2>
+
+<p>
+Conditional statements allow different actions based on conditions.
+</p>
+
+<ul>
+<li>if statement</li>
+<li>if-else statement</li>
+<li>if-else if-else statement</li>
+<li>switch statement</li>
+</ul>
+
+<p><b>Example:</b></p>
+
+<pre>
+if (coins == 5) {
+document.write("Buy the Orange");
+}
+</pre>
+
+</div>
+
+
+</body>
+</html>
