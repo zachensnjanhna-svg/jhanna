@@ -27,78 +27,24 @@
             flex-grow: 1;
         }
 
-        header {
-            background: linear-gradient(135deg, #4b2c64, #6e3a9a);
-            padding: 0.9rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+       .back-home {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 12px 25px;
+    background-color: #721378;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
-        nav {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            padding: 0 2rem;
-        }
-
-        nav a {
-            position: relative;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: 0.5px; 
-            padding: 0.4rem 0;
-            transition: color 0.3s ease, transform 0.2s ease;
-        }
-
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 0;
-            height: 3px;
-            background-color: #bb69d9;
-            transition: width 0.3s ease;
-            border-radius: 3px;
-        }
-
-        nav a:hover {
-            color: #bb69d9;
-            transform: scale(1.05); 
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        nav a.active {
-            color: #bb69d9;
-        }
-
-        nav a.active::after {
-            width: 100%;
-            background-color: #bb69d9;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-
-            nav a {
-                font-size: 1.1rem;
-            }
-        }
+.back-home:hover {
+    background-color: #A813B7;
+    transform: scale(1.05);
+}
 
         .heading {
             background-color: #721378;
@@ -224,13 +170,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav> 
-            <a href="https://zachensnjanhna-svg.github.io/jhanna/main/personal.html" >Personal Space</a>
-            <a href="https://zachensnjanhna-svg.github.io/jhanna/main.html">Lessons</a>
-            <a href="https://zachensnjanhna-svg.github.io/jhanna/main/reflection.html"> Reflection</a>
-        </nav>
-    </header>
+   
 
 <div class="container">
 
@@ -397,6 +337,9 @@ It is important to have this event because it makes students much more aware of 
     </div>
 </div>
 
+    <a href="main.html" class="back-home">⬅ Back to Home Page</a>
+
 </body>
 </html>
+
 
