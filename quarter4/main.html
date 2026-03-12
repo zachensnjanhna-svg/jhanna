@@ -61,6 +61,15 @@ border-radius:6px;
 background-color:#0072ff;
 }
 
+.reset-btn{
+margin-top:10px;
+background-color:#555;
+}
+
+.reset-btn:hover{
+background-color:black;
+}
+
 </style>
 
 <script>
@@ -71,6 +80,22 @@ var name = prompt("Enter your name to access the E-Portfolio:");
 
 if(name != "" && name != null){
 
+localStorage.setItem("portfolioUser", name);
+
+showPortal(name);
+
+}
+
+else{
+
+alert("Please enter your name first.");
+
+}
+
+}
+
+function showPortal(name){
+
 document.getElementById("message").innerHTML =
 "Welcome " + name + "! Click a section below.";
 
@@ -80,9 +105,21 @@ document.getElementById("enterBtn").style.display = "none";
 
 }
 
-else{
+function logout(){
 
-alert("Please enter your name first.");
+localStorage.removeItem("portfolioUser");
+
+location.reload();
+
+}
+
+window.onload = function(){
+
+var savedName = localStorage.getItem("portfolioUser");
+
+if(savedName){
+
+showPortal(savedName);
 
 }
 
@@ -119,6 +156,8 @@ AP Portfolio
 <a href="https://zachensnjanhna-svg.github.io/jhanna/main/reflection.html">
 Reflection
 </a>
+
+<button class="reset-btn" onclick="logout()">Reset Name</button>
 
 </div>
 
